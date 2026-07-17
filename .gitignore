@@ -1,0 +1,14 @@
+# Arquivos compilados do Java
+*.class
+
+# Pastas ocultas das IDEs (VS Code, IntelliJ, Eclipse)
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+
+# Pastas de saída (Build)
+bin/
+out/
+build/
