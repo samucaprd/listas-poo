@@ -1,9 +1,13 @@
 package br.com.ecommerce.main;
 
-// 🚨 AVISO: Note os IMPORTS! A classe Main está em um pacote diferente dos Modelos.
+// Importações corretas dos Modelos
 import br.com.ecommerce.model.Cliente;
 import br.com.ecommerce.model.Pedido;
 import br.com.ecommerce.model.Produto;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MainTeste {
     public static void main(String[] args) {
@@ -42,5 +46,34 @@ public class MainTeste {
         }
 
         System.out.println("\nTotal de Clientes no Servidor: " + Cliente.contadorClientes);
+
+        // ==========================================
+        // PARTE CORRIGIDA (Antiga classe AppEcommerce)
+        // ==========================================
+        System.out.println("\n=== TESTANDO O CARRINHO ===");
+        
+        // Aumentamos o tamanho para 4 para não estourar o limite
+        
+        List<Produto> carrinho = new ArrayList<>();//vazio a partir do Java 7
+
+        carrinho.add(new Produto(null, "Filtro de Óleo Yamaha R3", 85.00));
+        carrinho.add(new Produto(null, "Camisa do Corinthians", 299.90));
+        carrinho.add(new Produto(null, "Bola de Basquete", 150.00));
+        carrinho.add(new Produto(null, "Bolha Esportiva R3", 350.00)); 
+
+
     }
+    
 }
+
+public class TestaSet {
+public static void main(String[] args) {
+Set<Produto> favoritos = new HashSet<>();
+Produto bola = new Produto("Bola de Basquete", null, 150.00);
+
+favoritos.add(bola);
+favoritos.add(bola); // Será solenemente ignorado
+System.out.println("Tamanho: " + favoritos.size()); // Imprime 1
+}
+}
+
