@@ -4,7 +4,7 @@ Repositório destinado às atividades da disciplina de Programação Orientada a
 
 ## Listas
 
-### Lista 03
+### Lista 03 e 04
 Código-fonte disponível em [`lista-03-04`](./lista-03-04).
 
 ### Lista 10
