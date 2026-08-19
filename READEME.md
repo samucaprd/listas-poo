@@ -5,7 +5,7 @@ Repositório destinado às atividades da disciplina de Programação Orientada a
 ## Listas
 
 ### Lista 03
-Código-fonte disponível em [`lista-03`](./lista-03).
+Código-fonte disponível em [`lista-03-04`](./lista-03-04).
 
 ### Lista 10
 Exercício sobre estruturas de dados em Java, utilizando `ArrayList` e `HashSet`.
