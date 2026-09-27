@@ -1,0 +1,41 @@
+package br.com.ecommerce.main;
+
+import br.com.ecommerce.exception.TipoFreteInvalidoException;
+import br.com.ecommerce.model.CalculadoraFrete;
+import br.com.ecommerce.model.FreteMotoboy;
+import br.com.ecommerce.model.FretePac;
+import br.com.ecommerce.model.FreteSedex;
+
+public class MainTeste {
+
+    public static void main(String[] args) {
+
+        CalculadoraFrete calculadora = new CalculadoraFrete();
+        double valorPedido = 100.00;
+
+        try {
+
+            System.out.println(
+                "Frete Sedex: R$ " +
+                calculadora.processarFrete(valorPedido, new FreteSedex())
+            );
+
+            System.out.println(
+                "Frete PAC: R$ " +
+                calculadora.processarFrete(valorPedido, new FretePac())
+            );
+
+            System.out.println(
+                "Frete Motoboy: R$ " +
+                calculadora.processarFrete(valorPedido, new FreteMotoboy())
+            );
+
+            calculadora.processarFrete(valorPedido, null);
+
+        } catch (TipoFreteInvalidoException e) {
+
+            System.out.println(e.getMessage());
+
+        }
+    }
+}
